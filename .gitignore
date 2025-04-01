@@ -1,0 +1,131 @@
+# Archivos y directorios específicos de PHP
+/vendor/
+composer.phar
+composer.lock
+.phpunit.result.cache
+phpunit.xml
+.phpcs-cache
+.php_cs.cache
+.php-cs-fixer.cache
+
+# Archivos de configuración local
+.env
+.env.backup
+.env.local
+.env.*.local
+
+# Archivos de caché y logs
+/logs/
+/cache/
+*.log
+error_log
+access_log
+/var/cache/
+/var/logs/
+/var/sessions/
+
+# Archivos de base de datos
+*.sqlite
+*.sqlite3
+*.db
+
+# Dependencias y herramientas de desarrollo front-end
+/node_modules/
+/bower_components/
+.sass-cache/
+npm-debug.log
+yarn-error.log
+yarn.lock
+package-lock.json
+
+# Archivos generados de CSS y JS 
+/public/css/
+/public/js/
+/public/assets/build/
+/public/dist/
+/public/build/
+/public/hot
+/dist/
+
+# Archivos de caché de dependencias y herramientas de construcción
+.npm
+.yarn-cache
+
+# Archivos de carga de usuario
+/public/uploads/
+/public/storage/
+/storage/app/public/
+/storage/*.key
+
+# Archivos compilados
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Archivos del sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Archivos específicos de IDE y editores
+# PhpStorm
+.idea/
+# VSCode
+.vscode/
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+# NetBeans
+/nbproject/
+# Eclipse
+.buildpath
+.project
+.settings/
+# Vim
+*.swp
+*.swo
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Archivos temporales y backups
+*~
+*.bak
+*.orig
+*.tmp
+tmp/
+temp/
+
+# Archivos de prueba
+coverage/
+.coverage
+.phpunit.cache
+tests-report/
+
+# Archivos de documentación generados
+/docs/build/
+/docs/api/
+phpdoc-cache-*/
+.phpdoc
+
+# Archivos específicos de la aplicación que podrían contener datos sensibles
+config.php
+database.php
+settings.php
+credentials.php
+
+# Directorios y archivos específicos de frameworks PHP (como Laravel, Symfony, etc)
+/bootstrap/cache/
+.phpstorm.meta.php
+_ide_helper.php
+_ide_helper_models.php
