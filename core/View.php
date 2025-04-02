@@ -15,6 +15,11 @@ class View {
         return $this;
     }
 
+    public function layout($layout) {
+        $this->layout = $layout;
+        return $this;
+    }
+
     public function render($view, $data = []) {
         $this->data = array_merge($this->data, $data);
         $viewContent = $this->renderView($view);

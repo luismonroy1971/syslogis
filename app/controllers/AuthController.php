@@ -14,11 +14,11 @@ class AuthController extends Controller {
 
     public function login() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $email = $_POST['username'] ?? '';
+            $email = $_POST['email'] ?? '';
             $password = $_POST['password'] ?? '';
 
             if (empty($email) || empty($password)) {
-                $this->view('auth/login', ['error' => 'Por favor complete todos los campos']);
+                $this->view('auth/login', ['error' => 'Por favor ingrese su email y contraseña']);
                 return;
             }
 
@@ -29,8 +29,7 @@ class AuthController extends Controller {
                 $_SESSION['user_name'] = $user['nombre'];
                 $_SESSION['user_role'] = $user['rol_id'];
                 
-                header('Location: ' . BASE_URL . 'dashboard');
-                exit;
+                return $this->redirect(BASE_URL . 'dashboard');
             }
 
             $this->view('auth/login', ['error' => 'Credenciales inválidas']);
@@ -42,7 +41,6 @@ class AuthController extends Controller {
 
     public function logout() {
         session_destroy();
-        header('Location: ' . BASE_URL . 'auth/login');
-        exit;
+        return $this->redirect(BASE_URL . 'auth/login');
     }
 }

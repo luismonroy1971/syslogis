@@ -64,9 +64,8 @@ abstract class Controller {
     }
 
     protected function redirect($url, $status = 302) {
-        $this->response['status'] = $status;
-        $this->response['headers']['Location'] = $url;
-        return $this;
+        header('Location: ' . $url);
+        exit;
     }
 
     protected function addMiddleware($middleware) {

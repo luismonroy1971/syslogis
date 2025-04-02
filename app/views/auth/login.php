@@ -33,11 +33,11 @@
 
             <form class="auth-form" method="POST" action="<?php echo $this->url('auth/login'); ?>" id="loginForm">
                 <div class="form-group">
-                    <label for="username">Usuario</label>
+                    <label for="email">Correo Electrónico</label>
                     <div class="input-group">
-                        <span class="input-icon"><i class="fas fa-user"></i></span>
-                        <input type="text" id="username" name="username" required 
-                               class="form-control" placeholder="Ingrese su usuario">
+                        <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                        <input type="email" id="email" name="email" required 
+                               class="form-control" placeholder="Ingrese su correo electrónico">
                     </div>
                 </div>
 
@@ -94,12 +94,12 @@
         }
 
         document.getElementById('loginForm').addEventListener('submit', function(e) {
-            const username = document.getElementById('username');
+            const email = document.getElementById('email');
             const password = document.getElementById('password');
             
-            if (!username.value.trim() || !password.value.trim()) {
+            if (!email.value.trim() || !password.value.trim()) {
                 e.preventDefault();
-                alert('Por favor complete todos los campos');
+                showAlert('Por favor ingrese su email y contraseña', 'error');
             }
         });
     </script>
